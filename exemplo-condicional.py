@@ -1,4 +1,4 @@
-valor = int(input("Informe um valor númerico:"))
+valor = int(input("Informe um valor númerico: "))
 
 if valor>= 50:
     print (f"O número {valor} é maior ou igual a 50\n")
