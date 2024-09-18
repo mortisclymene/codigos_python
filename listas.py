@@ -31,4 +31,4 @@ animais.pop()# irá excluir sempre o último item
 print(animais)
 
 #forma 2 - usando pop() com índice
-animais.pop(0)#Aqui iremos escpçj
+animais.pop(0)#Aqui iremos escpç
