@@ -1,32 +1,17 @@
-meses = [
-    "janeiro",
-    "fevereiro",
-    "março",
-    "abril",
-    "maio",
-    "junho",
-    "julho",
-    "agosto",
-    "setembro",
-    "outubro",
-    "novembro",
-    "dezembro",
-]
-temperaturas = []
-for i in range(12):
-    temperaturas.append(
-        float(input(f"Digite a temperatura de {meses[i]} em ºC: "))
-    )
+lista =[0] *10
 
-total = 0
-for temp in temperaturas:
-    total += temp
-media = total/ len(temperaturas)
+import random
+for _ in range (10):
+    lista.append(random.randint(0,15))
 
+posi = []
+for i in range (len(lista)):
+    if lista[i] == 10:
+        posi.append(i)
 
-print(f"Média anual das temperaturas: {media:.2f}")
+if posi:
+    print("O elemento 10 aparece nos índices:", posi)
+else:
+    print("O elemento 10 não aparece na lista.")
 
-for i in range(len(temperaturas)): 
-    temp = temperaturas[i] 
-    if temp > media: 
-        print(f"{meses[i]}: {temp:.2f}")
+print(lista)

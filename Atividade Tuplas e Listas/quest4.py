@@ -1,16 +1,32 @@
+meses = [
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
+]
+temperaturas = []
+for i in range(12):
+    temperaturas.append(
+        float(input(f"Digite a temperatura de {meses[i]} em ºC: "))
+    )
 
-lista = [int(input(f"Digite o {i+1}º número: ")) 
-    for i in range(10)]
+total = 0
+for temp in temperaturas:
+    total += temp
+media = total/ len(temperaturas)
 
-posicao = []
-i = 0
 
-for valor in lista:
-    if valor == 3:
-        posicao.append(i)
-    i += 1
+print(f"Média anual das temperaturas: {media:.2f}")
 
-if posicao:
-    print("O número 3 foi encontrado nas posições: {}".format(posicao))
-else:
-    print("O número 3 não foi encontrado na lista.")
+for i in range(len(temperaturas)): 
+    temp = temperaturas[i] 
+    if temp > media: 
+        print(f"{meses[i]}: {temp:.2f}")

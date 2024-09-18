@@ -1,18 +1,12 @@
-numeros = []
 
-while True:
-    valor = int(input("Digite um valor (0 para encerrar): "))
-    if valor == 0:
-        break
-    numeros.append(valor)
+valores = []
+for i in range (7): 
+    numero = int(input(f"Digite o {i+1}º número: "))
+    valores.append(numero)
 
-
-print("Lista original:", numeros)
-
-
-numeros_impares = []
-for numero in numeros:
+imp = 0
+for numero in valores:
     if numero % 2 != 0:
-        numeros_impares.append(numero)
-
-print("Lista sem números pares:", numeros_impares)
+        imp += 1
+        
+print(f"Existem {imp} números ímpares")
